@@ -200,3 +200,6 @@ If you want to wire multiple Unicorn data providers to your database, you create
 Well you just read that didn't you? If you have questions or bugs, feel free to open an issue.
 
 You can also find help on Sitecore Community Slack in [#unicorn](https://sitecorechat.slack.com/messages/unicorn/) or on Twitter ([@kamsar](https://twitter.com/kamsar)).
+
+* Best practices to use Unicorn when not wokring with Sitecore packages, if so - then at the time of Sitecore package installation will get issue.
+* To avoid this issue will have to serialize tree from content tree, then try sitecore package installation again.	
