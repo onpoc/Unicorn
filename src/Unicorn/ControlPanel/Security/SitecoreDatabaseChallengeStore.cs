@@ -88,7 +88,7 @@ namespace Unicorn.ControlPanel.Security
 					long expiresTicks;
 
 					// if the value in the field is not a valid long (ticks) value, or the value is valid but too old, we kill it
-					if (!long.TryParse(challenge["Expires"], out expiresTicks) || expiresTicks < DateTime.UtcNow.Ticks)
+					if (challenge != null && (!long.TryParse(challenge["Expires"], out expiresTicks) || expiresTicks < DateTime.UtcNow.Ticks))
 					{
 						// challenge name starts with 'AUTH'
 						_challengeStoreLogger?.ChallengeExpired(challenge.Name.Substring(4));
